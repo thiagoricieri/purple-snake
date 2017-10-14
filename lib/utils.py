@@ -9,6 +9,9 @@ class NiceColors:
 	BOLD = '\033[1m'
 	UNDERLINE = '\033[4m'
 
+	def white(self, text):
+		print(text)
+
 	def header(self, text):
 		print(self.HEADER + text + self.ENDC)
 
