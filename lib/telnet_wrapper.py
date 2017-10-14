@@ -9,7 +9,7 @@ class RokuTalk:
 		if defaultHost != None:
 			self.defaultHost = defaultHost
 
-	def hello(self):
+	def whats_your_host(self):
 		result = self.ask('👨‍💻 What\'s the host? (default = '+self.defaultHost+')')
 		if result is None or result == "":
 			result = self.defaultHost
@@ -23,7 +23,7 @@ class RokuTalk:
 		self.telnet.open(host, port)
 
 	def read(self):
-		out = self.telnet.read_until(b"\n", 10)
+		out = self.telnet.read_until(b"\n", 2)
 		return out.decode("UTF-8").strip()
 
 	def close(self):

@@ -9,6 +9,9 @@ class NiceColors:
 	BOLD = '\033[1m'
 	UNDERLINE = '\033[4m'
 
+	def clear(self):
+		print(chr(27) + "[2J")
+
 	def white(self, text):
 		print(text)
 
